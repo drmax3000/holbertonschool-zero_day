@@ -7,6 +7,19 @@
 .SH DESCRIPTION
  Simple_Shell is an sh-compatible command language interpreter that executes
  commands read from the standard input--->USER INPUT(Keyboard).
+PP
+-1.0.getppid.c (Write a program that prints the PID of the parent process.)
+.PP -1.1._proc_sys_kernel_pid_max - Write a shell script that prints the maximum
+ value a process ID can be.
+.PP-2.0.av.c - (Write a program that prints all the arguments,
+ without using ac.)
+.PP-2.1.Read_Line.c - (getline) Write a program that prints "$ ", wait for the
+user to enter a command, prints it on the next line.
+
+
+
+
+
 .SH
 .SH Return Value
  Always 0 for success, other number means failure.
