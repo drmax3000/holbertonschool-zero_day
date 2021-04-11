@@ -1,8 +1,13 @@
-./" Manpage for simple_shell
+./" Manpage for Simple_Shell
 .TH Shell By "April 15 2021" "Holberton School SJ " "0x16. C - Simple Shell"
 .B Our own Simple Shell
  -We try to build our own simple shell.
 .SH SYNOPSIS
+.SH SYNOPSIS
+./hsh [OPTIONS] [FILE]
+.SH DESCRIPTION
+Simple_Shell is an sh-compatible command language interpreter that executes
+commands read from the standard input--->USER INPUT(Keyboard).
 .SH
 .SH
 .SH Description
