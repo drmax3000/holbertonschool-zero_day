@@ -7,7 +7,7 @@
  */
 int lookforslash(char *cmd)
 {
-	int _cont = 0;
+	int cont = 0;
 
 	while (cmd[cont])
 	{
@@ -71,18 +71,18 @@ int compareEnv(char *s1, char *s2)
 char **identify_string(char *parameter)
 {
 	char **buf = malloc(1024 * sizeof(char *));
-	char *_split;
+	char *split;
 	int i = 0;
-	char *_delim = " \t\n";
+	char *delim = " \t\n";
 
 
 	split = strtok(parameter, delim);
 
-	while (_split != NULL)
+	while (split != NULL)
 	{
-		buf[i] = _split;
+		buf[i] = split;
 		i++;
-		_split = strtok(NULL, _delim);
+		split = strtok(NULL, delim);
 	}
 	execute_proc(buf);
 	return (buf);
