@@ -71,7 +71,7 @@ int _strlen(char *str)
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *a;
+	char *a, *b;
 	int lens1, lens2, j, i, e;
 
 	if (s1 == NULL)
@@ -98,5 +98,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		a[i] = s2[e];
 	}
-	return (a);
+
+	b = a;
+	free(a);
+	return (b);
 }

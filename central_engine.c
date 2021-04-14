@@ -71,10 +71,13 @@ int compareEnv(char *s1, char *s2)
 char **identify_string(char *parameter)
 {
 	char **buf = malloc(1024 * sizeof(char *));
+	char **buff;
 	char *split;
 	int i = 0;
 	char *delim = " \t\n";
 
+	if (buf == NULL)
+		return(NULL);
 
 	split = strtok(parameter, delim);
 
@@ -85,7 +88,10 @@ char **identify_string(char *parameter)
 		split = strtok(NULL, delim);
 	}
 	execute_proc(buf);
-	return (buf);
+
+	buff = buf;
+	free(buf);
+	return (buff);
 
 }
 /**

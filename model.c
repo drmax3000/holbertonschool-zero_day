@@ -12,8 +12,11 @@ char *find_command(char *command)
 	DIR *folder;
 	struct dirent *entry;
 	char *cmd, comp, **str  = malloc(sizeof(char) * 1024);
-	char **split = malloc(sizeof(char) * 1024);
+	char **split = malloc(sizeof(char) * 1024), **split2;
 	int i;
+
+	if (split == NULL || str == NULL)
+		return (NULL);
 
 	while (*environ != NULL)
 	{
@@ -34,7 +37,10 @@ char *find_command(char *command)
 					comp = _strcmpdir(cmd, command);
 					if (comp == 0)
 					{
-						return (*split);
+						split2 = split;
+						free(str);
+						free(split);
+						return (*split2);
 					}
 					if (cmd == NULL)
 					{
@@ -42,5 +48,8 @@ char *find_command(char *command)
 					}}}}
 		environ++;
 	}
+
+	free(str);
+	free(split);
 	return ("Error: Not Found");
 }
