@@ -10,7 +10,8 @@ void prompt(void)
 	{
 		char *text = NULL, **environ;
 		pid_t child_pid;
-		int status, lenbuf;
+		int status;
+		ssize_t lenbuf;
 		size_t bufsize = 0;
 
 		place("$ ");
@@ -44,4 +45,5 @@ void prompt(void)
 			identify_string(text);
 		else
 			wait(&status);
+
 	}}

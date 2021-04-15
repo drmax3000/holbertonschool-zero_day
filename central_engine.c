@@ -63,6 +63,7 @@ int compareEnv(char *s1, char *s2)
 
 	return (*s1 - *s2);
 }
+
 /**
  * identify_string ---> identyfy keyboard input.
  * @parameter: call prompt---> from another function (prompt)
@@ -90,10 +91,16 @@ char **identify_string(char *parameter)
 	execute_proc(buf);
 
 	buff = buf;
+
+	while (i != 0)
+	{
+		free(buf[i]);
+		i--;
+	}
 	free(buf);
 	return (buff);
-
 }
+
 /**
  * controlC - avoid--> close the shell
  * @sig: keep---> going shell
