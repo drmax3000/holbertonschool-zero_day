@@ -45,5 +45,4 @@ void prompt(void)
 			identify_string(text);
 		else
 			wait(&status);
-
 	}}

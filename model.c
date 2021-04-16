@@ -17,7 +17,6 @@ char *find_command(char *command)
 
 	if (split == NULL || str == NULL)
 		return (NULL);
-
 	while (*environ != NULL)
 	{
 		if (!(_strcmpdir(*environ, "PATH")))
@@ -48,8 +47,5 @@ char *find_command(char *command)
 					}}}}
 		environ++;
 	}
-
-	free(str);
-	free(split);
 	return ("Error: Not Found");
 }
