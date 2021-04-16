@@ -1,30 +1,32 @@
 ./" Manpage for Simple_Shell
-.TH Shell By "April 15 2021" "Holberton School SJ " "0x16. C - Simple Shell"
+./" Contact 2709@holbertonschool.com or 2613@holbertonschool.com to correct errors or typos
+.TH man 1 "April 15 2021" "1.0" "Simple Shell man page"
+
+.SH NAME
 .B Our own Simple Shell
 -We try to build our own simple shell.
+
 .SH SYNOPSIS
 ./hsh [OPTIONS] [FILE]
+
 .SH DESCRIPTION
  Simple_Shell is an sh-compatible command language interpreter that executes
  commands read from the standard input--->USER INPUT(Keyboard).
-PP
--1.0.getppid.c (Write a program that prints the PID of the parent process.)
-.PP -1.1._proc_sys_kernel_pid_max - Write a shell script that prints the maximum
- value a process ID can be.
-.PP-2.0.av.c - (Write a program that prints all the arguments,
- without using ac.)
-.PP-2.1.Read_Line.c - (getline) Write a program that prints "$ ", wait for the
-user to enter a command, prints it on the next line.
 
-
-
+.PP -1.0.getppid.c (Write a program that prints the PID of the parent process.)
+.PP -1.1._proc_sys_kernel_pid_max - Write a shell script that prints the maximum value a process ID can be.
+.PP -2.0.av.c - (Write a program that prints all the arguments, without using ac.)
+.PP -2.1.Read_Line.c - (getline) Write a program that prints "$ ", wait for the user to enter a command, prints it on the next line.
 
 
 .SH
 .SH Return Value
  Always 0 for success, other number means failure.
-.SH It will look inside al direction PATH env for executable.
+
+.SH It will look inside a direction PATH env for executable.
+
 .SH Bugs
  Single space required after argument.
+
 .SH Author
  Luis Melendez , Luis Reyes
