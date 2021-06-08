@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int  main ()
+
+{
+
+	int num = 0;
+        int num1 = 1;
+        int num2 = 2;
+        int num3 = 3;
+
+	printf("Num 0:%d\n", num);
+	printf("Num 1:%d\n", num1);
+	printf("Num 2:%d\n", num2);
+	printf("Num 3:%d\n", num3);
+
+	return;
+}
